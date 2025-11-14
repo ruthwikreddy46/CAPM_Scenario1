@@ -1,0 +1,74 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### EmployeeSet
+# @name EmployeeSet_GET
+GET {{server}}/odata/v4/my/EmployeeSet
+Authorization: Basic {{username}}:{{password}}
+
+
+### EmployeeSet
+# @name EmployeeSet_POST
+POST {{server}}/odata/v4/my/EmployeeSet
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "99476313-41c9-4862-b236-7e7b145134eb",
+  "nameFirst": "nameFirst-9947631",
+  "nameMiddle": "nameMiddle-9947631",
+  "nameLast": "nameLast-9947631",
+  "nameInitials": "nameInitials-9947631",
+  "Gender": "female",
+  "Language": "1",
+  "phoneNumber": "+18008529001",
+  "Email": "",
+  "loginName": "Name-9947631",
+  "Currency": {
+    "code": "EUR"
+  },
+  "salaryAmount": 6000.19,
+  "accountNumber": "ntNumber-9947631",
+  "bankId": "-9947631",
+  "bankName": "bankName-9947631"
+}
+
+
+### EmployeeSet
+# @name EmployeeSet_PATCH
+PUT {{server}}/odata/v4/my/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+      "ID": "02BD2137-0890-1EEA-A6C2-BB55C19787FB",
+      "nameFirst": "Sally",
+      "nameMiddle": null,
+      "nameLast": "Spring",
+      "nameInitials": null,
+      "Gender": "F",
+      "Language": "E",
+      "phoneNumber": "+1 226 774 524",
+      "Email": "sally.spring@itelo.info",
+      "loginName": "SPRINGS",
+      "Currency_code": "USD",
+      "salaryAmount": 55549,
+      "accountNumber": "111222333",
+      "bankId": " 100065",
+      "bankName": "My Bank of Antioch"
+    }
+
+
+### EmployeeSet
+# @name EmployeeSet_DELETE
+DELETE {{server}}/odata/v4/my/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Currencies
+# @name Currencies_GET
+GET {{server}}/odata/v4/my/Currencies
+Authorization: Basic {{username}}:{{password}}
