@@ -8,6 +8,11 @@
 GET {{server}}/odata/v4/my/EmployeeSet
 Authorization: Basic {{username}}:{{password}}
 
+####Salary->top-2
+GET {{server}}/odata/v4/my/EmployeeSet?$orderby=salaryAmount&$top=2
+
+####EMP-'S'
+GET {{server}}/odata/v4/my/EmployeeSet?$filter=startswith(nameFirst,'S')
 
 ### EmployeeSet
 # @name EmployeeSet_POST
